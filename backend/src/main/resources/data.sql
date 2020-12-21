@@ -1,0 +1,14 @@
+insert into employee(name,email,department,joining) values ('John', 'john@mail.com', 'IT', '2020-01-19');
+insert into employee(name,email,department,joining) values ('Mary', 'mary@mail.com', 'BPS', '2020-01-19');
+insert into employee(name,email,department,joining) values ('Bliss', 'bliss@mail.com', 'IT', '2020-01-19');
+insert into employee(name,email,department,joining) values ('Park', 'park@mail.com', 'BPS', '2020-02-19');
+insert into employee(name,email,department,joining) values ('Bloke', 'bloke@mail.com', 'IT', '2020-02-19');
+insert into employee(name,email,department,joining) values ('Blake', 'blake@mail.com', 'BPS', '2020-03-19');
+insert into employee(name,email,department,joining) values ('Beep', 'beep@mail.com', 'IT', '2020-03-19');
+insert into employee(name,email,department,joining) values ('Bop', 'bop@mail.com', 'IT', '2020-03-19');
+insert into employee(name,email,department,joining) values ('Xu', 'xu@mail.com', 'BPS', '2020-03-19');
+insert into employee(name,email,department,joining) values ('Ma', 'ma@mail.com', 'IT', '2020-06-19');
+insert into employee(name,email,department,joining) values ('Harry', 'harry@mail.com', 'IT', '2020-04-19');
+insert into employee(name,email,department,joining) values ('Ron', 'ron@mail.com', 'BPS', '2020-04-19');
+insert into employee(name,email,department,joining) values ('Sirius', 'sirius@mail.com', 'IT', '2020-11-19');
+insert into employee(name,email,department,joining) values ('Shem', 'shem@mail.com', 'BPS', '2020-11-19');
