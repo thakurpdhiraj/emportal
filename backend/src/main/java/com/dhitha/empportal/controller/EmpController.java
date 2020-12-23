@@ -1,7 +1,7 @@
 package com.dhitha.empportal.controller;
 
 import com.dhitha.empportal.model.EmpRequest;
-import com.dhitha.empportal.model.Employee;
+import com.dhitha.empportal.model.EmpResponse;
 import com.dhitha.empportal.service.EmpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -20,7 +20,7 @@ public class EmpController {
 
   @CrossOrigin(origins = "http://localhost:8080")
   @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<?> getEmployees(EmpRequest empRequest){
+  public ResponseEntity<EmpResponse> getEmployees(EmpRequest empRequest) {
     return ResponseEntity.ok(empService.getAllEmployee(empRequest));
   }
 }
