@@ -1,6 +1,6 @@
 <template>
   <v-container class="pa-0">
-    <v-row v-if="error">
+    <v-row class="_error_row" v-if="error">
       <v-col cols="12">
         <v-snackbar v-model="error" multi-line timeout="5000">
           {{ errorMessage }}
@@ -12,7 +12,7 @@
         </v-snackbar>
       </v-col>
     </v-row>
-    <v-row v-show="formVisible">
+    <v-row class="_form_row" v-show="formVisible">
       <v-col md="6" cols="12" offset-md="3">
         <v-form @submit.prevent="submit">
           <v-container>
@@ -98,6 +98,7 @@
             <v-row>
               <v-col cols="6">
                 <v-btn
+                  id="submitBtn"
                   class="success mr-5 elevation-6"
                   @click="submit"
                   :disabled="!valid"
@@ -106,7 +107,7 @@
                 </v-btn>
               </v-col>
               <v-col cols="6">
-                <v-btn @click="reset" class="elevation-6">
+                <v-btn id="resetBtn" @click="reset" class="elevation-6">
                   Clear
                 </v-btn>
               </v-col>
@@ -115,9 +116,13 @@
         </v-form>
       </v-col>
     </v-row>
-    <v-row v-show="!formVisible" class="pa-0" style="top:200px;">
+    <v-row
+      v-show="!formVisible"
+      class="_form_refine_row pa-0"
+      style="top:200px;"
+    >
       <v-col md="12" cols="12">
-        <v-btn color="primary" @click="showForm">
+        <v-btn id="refineBtn" color="primary" @click="showForm">
           Refine Search
         </v-btn>
       </v-col>
@@ -200,9 +205,7 @@
 </template>
 
 <script>
-import axios from "axios";
 import backend from "../service/backend";
-import every from "lodash/every";
 import values from "lodash/values";
 import isNull from "lodash/isNull";
 
